@@ -96,11 +96,57 @@ function show(){
         t++;
         div1_html += items[i].value + "\n";
     }
+<<<<<<< Updated upstream
     document.getElementById("div1").innerText = div1_html;
+=======
+    str += "</ul>";
+
+    console.log(selectedWords);
+    document.getElementById("div1").innerHTML = str;
+    sessionStorage.setItem('selectedWords', selectedWords);
+
+>>>>>>> Stashed changes
 }
 function uncheckAll() {
     document.querySelectorAll('input[type="checkbox"]')
         .forEach(el => el.checked = false);
 }
 
+<<<<<<< Updated upstream
 document.querySelector('button').addEventListener('click', uncheckAll)
+=======
+function buildList(){
+    let selectedWords = sessionStorage.getItem("selectedWords");
+    if(selectedWords.includes("Love")) {
+        words.push(love);
+    }
+    if(selectedWords.includes("Travel")) {
+        words.push(travel);
+    }
+    if (selectedWords.includes("Graduation")){
+        words.push(graduation);
+    }
+    if(selectedWords.includes("Fitness")) {
+        words.push(fitness);
+    }
+    if (selectedWords.includes("Faith")){
+        words.push(faith);
+    }
+    if (selectedWords.includes("House")){
+        words.push(house);
+    }
+    if (selectedWords.includes("Money")){
+        words.push(money);
+    }
+    if (selectedWords.includes("Business")){
+        words.push(business);
+    }
+    if (selectedWords.includes("Self Care")){
+        words.push(selfCare);
+    }
+    if (selectedWords.includes("Adventure")){
+        words.push(adventure);
+    }
+    return words;
+}
+>>>>>>> Stashed changes
